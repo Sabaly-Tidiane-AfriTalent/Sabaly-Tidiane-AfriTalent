@@ -1,23 +1,336 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
-<!-- Bootstrap 5 via CDN : feuille de style -->
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-<!-- Votre feuille de style personnelle -->
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — À propos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<!-- Le contenu de la page sera ajoute ici -->
-<!-- Bootstrap 5 via CDN : script JavaScript -->
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
-<!-- Votre script JavaScript -->
-<script src="js/main.js"></script>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+  <img src="IMAGES/logoAfri.jpg" alt="Logo AfriTalent" width="40" height="40">
+  AfriTalent
+</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-3">
+            <a class="btn btn-warning fw-bold" href="contact.html">Rejoindre AfriTalent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- En-tête de la page -->
+    <section id="about-header" class="py-5 mt-5">
+      <div class="container text-center">
+        <h1 class="fw-bold">À propos d'AfriTalent</h1>
+        <p class="text-muted">
+          Découvrez l'histoire, l'équipe et les valeurs qui font d'AfriTalent 
+          la plateforme de référence du freelance tech en Afrique.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section "Notre Histoire" -->
+    <section id="histoire" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Texte -->
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4">Notre Histoire</h2>
+            <p>
+              AfriTalent est née en 2022 d'un constat simple : des milliers de 
+              développeurs, designers et créateurs de contenu africains avaient 
+              des compétences de haut niveau, mais peinaient à les valoriser 
+              sur le marché international.
+            </p>
+            <p>
+              Fondée à Dakar par une équipe de passionnés du numérique, 
+              la plateforme a rapidement grandi pour devenir le pont entre 
+              les talents africains et les entreprises du monde entier.
+            </p>
+            <p>
+              Aujourd'hui, AfriTalent rassemble plus de 2 500 freelances 
+              dans 32 pays africains et a permis la réalisation de plus 
+              de 12 000 missions avec succès.
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="IMAGES/lancementAfri.jpg"
+              alt="L'équipe AfriTalent réunie lors du lancement de la plateforme en 2022"
+              class="img-fluid rounded">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section "Nos Valeurs" -->
+    <section id="valeurs" class="py-5">
+      <div class="container">
+
+        <h2 class="text-center fw-bold mb-2">Nos Valeurs</h2>
+        <p class="text-center text-muted mb-5">
+          Les principes qui guident chacune de nos décisions.
+        </p>
+        <div class="row g-4">
+          <!-- Valeur 1 : Innovation -->
+          <div class="col-lg-3 col-md-6">
+            <article class="valeur-card text-center p-4" aria-label="Valeur Innovation">
+              <i class="bi bi-lightbulb-fill valeur-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Innovation</h3>
+              <p class="text-muted">
+                Nous repoussons constamment les limites pour offrir 
+                une expérience toujours plus moderne et efficace.
+              </p>
+            </article>
+          </div>
+          <!-- Valeur 2 : Accessibilité -->
+          <div class="col-lg-3 col-md-6">
+            <article class="valeur-card text-center p-4" aria-label="Valeur Accessibilité">
+              <i class="bi bi-universal-access valeur-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Accessibilité</h3>
+              <p class="text-muted">
+                AfriTalent est conçue pour être accessible à tous, 
+                quel que soit le niveau technique ou la région.
+              </p>
+            </article>
+          </div>
+          <!-- Valeur 3 : Communauté -->
+          <div class="col-lg-3 col-md-6">
+            <article class="valeur-card text-center p-4" aria-label="Valeur Communauté">
+              <i class="bi bi-people-fill valeur-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Communauté</h3>
+              <p class="text-muted">
+                Nous croyons en la force du collectif. Ensemble, 
+                les talents africains peuvent changer le monde numérique.
+              </p>
+            </article>
+          </div>
+          <!-- Valeur 4 : Excellence -->
+          <div class="col-lg-3 col-md-6">
+            <article class="valeur-card text-center p-4" aria-label="Valeur Excellence">
+              <i class="bi bi-trophy-fill valeur-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Excellence</h3>
+              <p class="text-muted">
+                Chaque mission, chaque profil, chaque interaction 
+                doit refléter le meilleur de ce que l'Afrique a à offrir.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section "L'équipe" -->
+    <section id="equipe" class="py-5">
+      <div class="container">
+
+        <h2 class="text-center fw-bold mb-2">Notre Équipe</h2>
+        <p class="text-center text-muted mb-5">
+          Des passionnés du numérique au service des talents africains.
+        </p>
+        <div class="row g-4">
+          <!-- Membre 1 -->
+          <div class="col-lg-3 col-md-6">
+            <article class="membre-card card text-center p-4" aria-label="Profil de Ousmane Sarr">
+              <img
+                src="IMAGES/agentFonda.jpg"
+                alt="Photo de Ousmane Sarr, fondateur et CEO d'AfriTalent"
+                class="membre-avatar rounded-circle mx-auto mb-3">
+              <h3 class="fs-5 fw-bold mb-1">Ousmane Sarr</h3>
+              <p class="text-primary fw-semibold mb-3">Fondateur &amp; CEO</p>
+              <!-- Liens réseaux sociaux -->
+              <div class="d-flex justify-content-center gap-3">
+                <a href="#" aria-label="LinkedIn de Ousmane Sarr">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Twitter de Ousmane Sarr">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+          <!-- Membre 2 -->
+          <div class="col-lg-3 col-md-6">
+            <article class="membre-card card text-center p-4" aria-label="Profil de Aissatou Barry">
+              <img
+                src="IMAGES/agentFem.jpg"
+                alt="Photo de Aissatou Barry, directrice technique d'AfriTalent"
+                class="membre-avatar rounded-circle mx-auto mb-3">
+              <h3 class="fs-5 fw-bold mb-1">Aissatou Barry</h3>
+              <p class="text-primary fw-semibold mb-3">Directrice Technique</p>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="#" aria-label="LinkedIn de Aissatou Barry">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Twitter de Aissatou Barry">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Membre 3 -->
+          <div class="col-lg-3 col-md-6">
+            <article class="membre-card card text-center p-4" aria-label="Profil de Mamadou Kouyaté">
+              <img
+                src="IMAGES/agentHom.jpg"
+                alt="Photo de Mamadou Kouyaté, responsable marketing d'AfriTalent"
+                class="membre-avatar rounded-circle mx-auto mb-3">
+              <h3 class="fs-5 fw-bold mb-1">Mamadou Kouyaté</h3>
+              <p class="text-primary fw-semibold mb-3">Responsable Marketing</p>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="#" aria-label="LinkedIn de Mamadou Kouyaté">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Twitter de Mamadou Kouyaté">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+          <!-- Membre 4 -->
+          <div class="col-lg-3 col-md-6">
+            <article class="membre-card card text-center p-4" aria-label="Profil de Rokia Touré">
+              <img
+                src="IMAGES/agentFemm.jpg"
+                alt="Photo de Rokia Touré, responsable communauté d'AfriTalent"
+                class="membre-avatar rounded-circle mx-auto mb-3">
+              <h3 class="fs-5 fw-bold mb-1">Rokia Touré</h3>
+              <p class="text-primary fw-semibold mb-3">Responsable Communauté</p>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="#" aria-label="LinkedIn de Rokia Touré">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Twitter de Rokia Touré">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section "Chiffres clés" en Bento Grid -->
+    <section id="chiffres" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-2">Chiffres Clés</h2>
+        <p class="text-center text-muted mb-5">
+          AfriTalent en quelques chiffres qui parlent d'eux-mêmes.
+        </p>
+        <!-- Bento Grid (le style CSS viendra au commit 4) -->
+        <div class="bento-grid">
+          <article class="bento-card text-center" aria-label="Nombre de freelances">
+            <i class="bi bi-people-fill bento-icon" aria-hidden="true"></i>
+            <h3 class="counter fw-bold" data-target="2500">0</h3>
+            <p class="text-muted">Freelances inscrits</p>
+          </article>
+          <article class="bento-card bento-card--large text-center" aria-label="Nombre d'entreprises">
+            <i class="bi bi-building bento-icon" aria-hidden="true"></i>
+            <h3 class="counter fw-bold" data-target="800">0</h3>
+            <p class="text-muted">Entreprises partenaires</p>
+          </article>
+          <article class="bento-card text-center" aria-label="Nombre de missions">
+            <i class="bi bi-briefcase-fill bento-icon" aria-hidden="true"></i>
+            <h3 class="counter fw-bold" data-target="12000">0</h3>
+            <p class="text-muted">Missions réalisées</p>
+          </article>
+          <article class="bento-card bento-card--wide text-center" aria-label="Nombre de pays">
+            <i class="bi bi-globe-africa bento-icon" aria-hidden="true"></i>
+            <h3 class="counter fw-bold" data-target="32">0</h3>
+            <p class="text-muted">Pays africains couverts</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">AfriTalent</h4>
+          <p class="text-muted">
+            La plateforme de référence pour connecter les freelances
+            tech africains aux entreprises du monde entier.
+          </p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" aria-label="Facebook AfriTalent"><i class="bi bi-facebook fs-5" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter AfriTalent"><i class="bi bi-twitter-x fs-5" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn AfriTalent"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram AfriTalent"><i class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">Liens utiles</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html">Accueil</a></li>
+            <li class="mb-2"><a href="freelances.html">Trouver un freelance</a></li>
+            <li class="mb-2"><a href="tarifs.html">Tarifs</a></li>
+            <li class="mb-2"><a href="about.html">À propos</a></li>
+            <li class="mb-2"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">Ressources</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="blog.html">Blog</a></li>
+            <li class="mb-2"><a href="#">Guide du freelance</a></li>
+            <li class="mb-2"><a href="#">Centre d'aide</a></li>
+            <li class="mb-2"><a href="#">Politique de confidentialité</a></li>
+            <li class="mb-2"><a href="#">Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">Contact</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
+              <a href="mailto:contact@afritalent.com">contact@afritalent.com</a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>
+              <span>+221 33 486 00 00</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
+              <span>Dakar, Sénégal</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-4">
+      <p class="text-center text-muted mb-0">
+        &copy; <span id="annee"></span> AfriTalent. Tous droits réservés.
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
