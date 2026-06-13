@@ -1,474 +1,424 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AfriTalent — Accueil</title>
-<!-- Bootstrap 5 via CDN : feuille de style -->
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-<!-- Votre feuille de style personnelle -->
-<link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — Accueil</title>
+  <!-- Bootstrap 5 via CDN : feuille de style -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <!-- Votre feuille de style personnelle -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-<!-- Navigation Bootstrap commune a toutes les pages -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNavbar">
-  <div class="container">
-<a class="navbar-brand" href="index.html">
-  <img src="IMAGES/logoAfri.jpg" alt="Logo AfriTalent" width="40" height="40">
-  AfriTalent
-</a>
-<button class="navbar-toggler" type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navMenu"
-aria-controls="navMenu"
-aria-expanded="false"
-aria-label="Ouvrir le menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-  <!-- Liens de navigation -->
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
-        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-        <!-- Bouton CTA visible dans la navbar -->
-        <li class="nav-item ms-3">
-          <a class="btn btn-warning fw-bold" href="contact.html">Rejoindre AfriTalent</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<main>
-<!-- Section Hero : accroche principale -->
-<section id="hero" class="py-5 mt-5">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- Texte de gauche -->
-      <div class="col-lg-6">
-        <h1 class="display-4 fw-bold">
-          Trouvez le talent africain <span class="text-warning">qu'il vous faut!</span>
-        </h1>
-        <h2 class="fs-5 fw-normal text-muted mt-3">
-          AfriTalent connecte les meilleurs freelances tech d'Afrique 
-          aux entreprises du monde entier. Rapidement, simplement, efficacement.
-        </h2>
-
-        <!-- Deux boutons CTA -->
-        <div class="d-flex gap-3 mt-4 flex-wrap">
-          <a href="freelances.html" class="btn btn-primary btn-lg">
-            Je suis Freelance
-          </a>
-          <a href="freelances.html" class="btn btn-outline-primary btn-lg">
-            Je cherche un Freelance
-          </a>
-        </div>
-      </div>
-      <!-- Image de droite -->
-      <div class="col-lg-6 text-center mt-4 mt-lg-0">
-        <img 
-          src="IMAGES/hero0.png" 
-          alt="Freelances africains travaillant sur des projets tech" 
-          class="img-fluid rounded">
-      </div>
-    </div>
-    <!-- Statistiques animées (les chiffres seront animés en JS plus tard) -->
-    <div class="row text-center mt-5">
-      <div class="col-md-4">
-        <h3 class="fw-bold text-primary" data-target="2500" class="counter">0</h3>
-        <p class="text-muted">Freelances inscrits</p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="fw-bold text-primary" data-target="800" class="counter">0</h3>
-        <p class="text-muted">Entreprises partenaires</p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="fw-bold text-primary" data-target="12000" class="counter">0</h3>
-        <p class="text-muted">Missions réalisées</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- Section "Comment ça marche" -->
-<section id="comment-ca-marche" class="py-5">
-  <div class="container">
-
-    <h2 class="text-center fw-bold mb-2">Comment ça marche ?</h2>
-    <p class="text-center text-muted mb-5">
-      En quelques étapes simples, trouvez le freelance idéal ou décrochez votre prochaine mission.
-    </p>
-
-    <!-- Grille Bento : disposition asymétrique (le style viendra au commit 4) -->
-    <div class="bento-grid">
-
-      <!-- Étape 1 -->
-      <article class="bento-card bento-card--large" aria-label="Étape 1">
-        <span class="step-number">01</span>
-        <i class="bi bi-person-plus-fill step-icon" aria-hidden="true"></i>
-        <h3>Créez votre profil</h3>
-        <p>
-          Inscrivez-vous gratuitement et construisez un profil complet. 
-          Mettez en avant vos compétences, votre portfolio et votre tarif horaire.
-        </p>
-      </article>
-
-      <!-- Étape 2 -->
-      <article class="bento-card" aria-label="Étape 2">
-        <span class="step-number">02</span>
-        <i class="bi bi-search step-icon" aria-hidden="true"></i>
-        <h3>Explorez les opportunités</h3>
-        <p>
-          Parcourez les missions disponibles ou laissez les entreprises 
-          vous trouver grâce à notre moteur de recherche intelligent.
-        </p>
-      </article>
-
-      <!-- Étape 3 -->
-      <article class="bento-card" aria-label="Étape 3">
-        <span class="step-number">03</span>
-        <i class="bi bi-chat-dots-fill step-icon" aria-hidden="true"></i>
-        <h3>Échangez et négociez</h3>
-        <p>
-          Discutez directement avec le client ou le freelance. 
-          Définissez ensemble les modalités de la mission.
-        </p>
-      </article>
-
-      <!-- Étape 4 -->
-      <article class="bento-card bento-card--wide" aria-label="Étape 4">
-        <span class="step-number">04</span>
-        <i class="bi bi-patch-check-fill step-icon" aria-hidden="true"></i>
-        <h3>Collaborez en toute confiance</h3>
-        <p>
-          Travaillez sereinement grâce à notre système de paiement sécurisé 
-          et laissez un avis à la fin de chaque mission pour renforcer la communauté AfriTalent.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-<!-- Section "Catégories de services" -->
-<section id="categories" class="py-5">
-  <div class="container">
-
-    <h2 class="text-center fw-bold mb-2">Nos catégories de services</h2>
-    <p class="text-center text-muted mb-5">
-      Des experts disponibles dans tous les domaines du numérique.
-    </p>
-
-    <div class="row g-4">
-
-      <!-- Catégorie 1 : Développement Web -->
-      <div class="col-lg-4 col-md-6">
-        <article class="category-card text-center p-4" aria-label="Développement Web">
-          <i class="bi bi-code-slash category-icon" aria-hidden="true"></i>
-          <h3 class="fs-5 fw-bold mt-3">Développement Web</h3>
-          <p class="text-muted">128 freelances disponibles</p>
-        </article>
-      </div>
-
-      <!-- Catégorie 2 : Design UI/UX -->
-      <div class="col-lg-4 col-md-6">
-        <article class="category-card text-center p-4" aria-label="Design UI/UX">
-          <i class="bi bi-palette-fill category-icon" aria-hidden="true"></i>
-          <h3 class="fs-5 fw-bold mt-3">Design UI/UX</h3>
-          <p class="text-muted">94 freelances disponibles</p>
-        </article>
-      </div>
-
-      <!-- Catégorie 3 : Marketing Digital -->
-      <div class="col-lg-4 col-md-6">
-        <article class="category-card text-center p-4" aria-label="Marketing Digital">
-          <i class="bi bi-megaphone-fill category-icon" aria-hidden="true"></i>
-          <h3 class="fs-5 fw-bold mt-3">Marketing Digital</h3>
-          <p class="text-muted">76 freelances disponibles</p>
-        </article>
-      </div>
-
-      <!-- Catégorie 4 : Data & IA -->
-      <div class="col-lg-4 col-md-6">
-        <article class="category-card text-center p-4" aria-label="Data et Intelligence Artificielle">
-          <i class="bi bi-robot category-icon" aria-hidden="true"></i>
-          <h3 class="fs-5 fw-bold mt-3">Data &amp; IA</h3>
-          <p class="text-muted">57 freelances disponibles</p>
-        </article>
-      </div>
-
-      <!-- Catégorie 5 : Rédaction Tech -->
-      <div class="col-lg-4 col-md-6">
-        <article class="category-card text-center p-4" aria-label="Rédaction Tech">
-          <i class="bi bi-pencil-fill category-icon" aria-hidden="true"></i>
-          <h3 class="fs-5 fw-bold mt-3">Rédaction Tech</h3>
-          <p class="text-muted">43 freelances disponibles</p>
-        </article>
-      </div>
-
-      <!-- Catégorie 6 : DevOps & Cloud -->
-      <div class="col-lg-4 col-md-6">
-        <article class="category-card text-center p-4" aria-label="DevOps et Cloud">
-          <i class="bi bi-cloud-fill category-icon" aria-hidden="true"></i>
-          <h3 class="fs-5 fw-bold mt-3">DevOps &amp; Cloud</h3>
-          <p class="text-muted">61 freelances disponibles</p>
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- Section "Témoignages" -->
-<section id="temoignages" class="py-5">
-  <div class="container">
-
-    <h2 class="text-center fw-bold mb-2">Ce qu'ils disent de nous</h2>
-    <p class="text-center text-muted mb-5">
-      Ils ont fait confiance à AfriTalent. Voici leur expérience.
-    </p>
-
-    <!-- Carousel Bootstrap -->
-    <div id="carouselTemoignages" class="carousel slide" data-bs-ride="carousel">
-
-      <!-- Indicateurs (petits points en bas) -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="0"
-          class="active" aria-current="true" aria-label="Témoignage 1"></button>
-        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="1"
-          aria-label="Témoignage 2"></button>
-        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="2"
-          aria-label="Témoignage 3"></button>
-      </div>
-
-      <!-- Contenu du carousel -->
-      <div class="carousel-inner">
-
-        <!-- Témoignage 1 -->
-        <div class="carousel-item active">
-          <article class="temoignage-card text-center p-5" aria-label="Témoignage de Aminata Diallo">
-            <img
-              src="IMAGES/Diallo.jpg"
-              alt="Photo de Aminata Diallo, développeuse web freelance"
-              class="temoignage-avatar rounded-circle mb-3">
-            <p class="temoignage-citation fst-italic mb-3">
-              « AfriTalent a transformé ma carrière. En deux mois, j'ai décroché 
-              3 missions sérieuses et doublé mes revenus. La plateforme est simple, 
-              claire et vraiment adaptée à notre réalité africaine. »
-            </p>
-            <!-- Note : 5 étoiles -->
-            <div class="temoignage-etoiles mb-2" aria-label="Note : 5 étoiles sur 5">
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-            </div>
-            <h3 class="fs-6 fw-bold mb-0">Aminata Diallo</h3>
-            <p class="text-muted small">Développeuse Web — Freelance</p>
-          </article>
-        </div>
-
-        <!-- Témoignage 2 -->
-        <div class="carousel-item">
-          <article class="temoignage-card text-center p-5" aria-label="Témoignage de Kofi Mensah">
-            <img
-              src="IMAGES/Mendy.jpg"
-              alt="Photo de Sara Doumith, directeur technique"
-              class="temoignage-avatar rounded-circle mb-3">
-            <p class="temoignage-citation fst-italic mb-3">
-              « Nous avons recruté deux développeurs via AfriTalent en moins d'une semaine. 
-              Les profils étaient sérieux, les tarifs compétitifs et la communication 
-              avec les freelances a été fluide du début à la fin. »
-            </p>
-            <!-- Note : 4 étoiles -->
-            <div class="temoignage-etoiles mb-2" aria-label="Note : 4 étoiles sur 5">
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star text-warning" aria-hidden="true"></i>
-            </div>
-            <h3 class="fs-6 fw-bold mb-0">Sara Doumith</h3>
-            <p class="text-muted small">Directrice Technique — Entreprise</p>
-          </article>
-        </div>
-
-        <!-- Témoignage 3 -->
-        <div class="carousel-item">
-          <article class="temoignage-card text-center p-5" aria-label="Témoignage de Fatou Ndiaye">
-            <img
-              src="IMAGES/Faye.jpg"
-              alt="Photo de Issa Faye, designer UI/UX freelance"
-              class="temoignage-avatar rounded-circle mb-3">
-            <p class="temoignage-citation fst-italic mb-3">
-              « Ce que j'aime chez AfriTalent, c'est la confiance. Le système de paiement 
-              sécurisé m'a convaincue dès le départ. Je recommande la plateforme à tous 
-              les créatifs africains qui veulent se lancer. »
-            </p>
-            <!-- Note : 5 étoiles -->
-            <div class="temoignage-etoiles mb-2" aria-label="Note : 5 étoiles sur 5">
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-              <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
-            </div>
-            <h3 class="fs-6 fw-bold mb-0">Issa Faye</h3>
-            <p class="text-muted small">Designer UI/UX — Freelance</p>
-          </article>
-        </div>
-
-      </div><!-- fin carousel-inner -->
-
-      <!-- Boutons précédent / suivant -->
-      <button class="carousel-control-prev" type="button"
-        data-bs-target="#carouselTemoignages" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Précédent</span>
+  <!-- Navigation Bootstrap commune a toutes les pages -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="IMAGES/logoAfri.jpg" alt="Logo AfriTalent" width="40" height="40">
+        AfriTalent
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <button class="carousel-control-next" type="button"
-        data-bs-target="#carouselTemoignages" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Suivant</span>
-      </button>
-    </div><!-- fin carousel -->
-  </div>
-</section>
-<!-- Section "Appel à l'action" (CTA) -->
-<section id="cta" class="py-5">
-  <div class="container">
-    <div class="cta-bandeau text-center p-5">
+      <!-- Liens de navigation -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
-      <h2 class="fw-bold mb-3">
-        Rejoignez la communauté AfriTalent dès aujourd'hui !
-      </h2>
-      <p class="mb-4">
-        Plus de 2 500 freelances et 800 entreprises nous font déjà confiance. 
-        À votre tour de faire partie de l'aventure.
+          <!-- Bouton CTA visible dans la navbar -->
+          <li class="nav-item ms-3">
+            <a class="btn btn-warnin fw-bold" href="contact.html">Rejoindre AfriTalent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- Section Hero : accroche principale -->
+    <section id="hero" class="py-5 mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Texte de gauche -->
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold">
+              Trouvez le talent africain <span class="text-warnin">qu'il vous faut!</span>
+            </h1>
+            <h2 class="fs-5 fw-normal text-muted mt-3">
+              AfriTalent connecte les meilleurs freelances tech d'Afrique
+              aux entreprises du monde entier. Rapidement, simplement, efficacement.
+            </h2>
+
+            <!-- Deux boutons CTA -->
+            <div class="d-flex gap-3 mt-4 flex-wrap">
+              <a href="freelances.html" class="btn btn-primary btn-lg">
+                Je suis Freelance
+              </a>
+              <a href="freelances.html" class="btn btn-outline-primary btn-lg">
+                Je cherche un Freelance
+              </a>
+            </div>
+          </div>
+          <!-- Image de droite -->
+          <div class="col-lg-6 text-center mt-4 mt-lg-0">
+            <img src="IMAGES/hero0.png" alt="Freelances africains travaillant sur des projets tech"
+              class="img-fluid rounded">
+          </div>
+        </div>
+        <!-- Statistiques animées (les chiffres seront animés en JS plus tard) -->
+        <div class="row text-center mt-5">
+          <div class="col-md-4">
+            <h3 class="fw-bold text-primary" data-target="2500" class="counter">0</h3>
+            <p class="text-muted">Freelances inscrits</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="fw-bold text-primary" data-target="800" class="counter">0</h3>
+            <p class="text-muted">Entreprises partenaires</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="fw-bold text-primary" data-target="12000" class="counter">0</h3>
+            <p class="text-muted">Missions réalisées</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Section "Comment ça marche" -->
+    <section id="comment-ca-marche" class="py-5">
+      <div class="container">
+
+        <h2 class="text-center fw-bold mb-2">Comment ça marche ?</h2>
+        <p class="text-center text-muted mb-5">
+          En quelques étapes simples, trouvez le freelance idéal ou décrochez votre prochaine mission.
+        </p>
+
+        <!-- Grille Bento : disposition asymétrique (le style viendra au commit 4) -->
+        <div class="bento-grid">
+
+          <!-- Étape 1 -->
+          <article class="bento-card bento-card--large" aria-label="Étape 1">
+            <span class="step-number">01</span>
+            <i class="bi bi-person-plus-fill step-icon" aria-hidden="true"></i>
+            <h3>Créez votre profil</h3>
+            <p>
+              Inscrivez-vous gratuitement et construisez un profil complet.
+              Mettez en avant vos compétences, votre portfolio et votre tarif horaire.
+            </p>
+          </article>
+
+          <!-- Étape 2 -->
+          <article class="bento-card" aria-label="Étape 2">
+            <span class="step-number">02</span>
+            <i class="bi bi-search step-icon" aria-hidden="true"></i>
+            <h3>Explorez les opportunités</h3>
+            <p>
+              Parcourez les missions disponibles ou laissez les entreprises
+              vous trouver grâce à notre moteur de recherche intelligent.
+            </p>
+          </article>
+
+          <!-- Étape 3 -->
+          <article class="bento-card" aria-label="Étape 3">
+            <span class="step-number">03</span>
+            <i class="bi bi-chat-dots-fill step-icon" aria-hidden="true"></i>
+            <h3>Échangez et négociez</h3>
+            <p>
+              Discutez directement avec le client ou le freelance.
+              Définissez ensemble les modalités de la mission.
+            </p>
+          </article>
+
+          <!-- Étape 4 -->
+          <article class="bento-card bento-card--wide" aria-label="Étape 4">
+            <span class="step-number">04</span>
+            <i class="bi bi-patch-check-fill step-icon" aria-hidden="true"></i>
+            <h3>Collaborez en toute confiance</h3>
+            <p>
+              Travaillez sereinement grâce à notre système de paiement sécurisé
+              et laissez un avis à la fin de chaque mission pour renforcer la communauté AfriTalent.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- Section "Catégories de services" -->
+    <section id="categories" class="py-5">
+      <div class="container">
+
+        <h2 class="text-center fw-bold mb-2">Nos catégories de services</h2>
+        <p class="text-center text-muted mb-5">
+          Des experts disponibles dans tous les domaines du numérique.
+        </p>
+
+        <div class="row g-4">
+
+          <!-- Catégorie 1 : Développement Web -->
+          <div class="col-lg-4 col-md-6">
+            <article class="category-card text-center p-4" aria-label="Développement Web">
+              <i class="bi bi-code-slash category-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Développement Web</h3>
+              <p class="text-muted">128 freelances disponibles</p>
+            </article>
+          </div>
+
+          <!-- Catégorie 2 : Design UI/UX -->
+          <div class="col-lg-4 col-md-6">
+            <article class="category-card text-center p-4" aria-label="Design UI/UX">
+              <i class="bi bi-palette-fill category-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Design UI/UX</h3>
+              <p class="text-muted">94 freelances disponibles</p>
+            </article>
+          </div>
+
+          <!-- Catégorie 3 : Marketing Digital -->
+          <div class="col-lg-4 col-md-6">
+            <article class="category-card text-center p-4" aria-label="Marketing Digital">
+              <i class="bi bi-megaphone-fill category-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Marketing Digital</h3>
+              <p class="text-muted">76 freelances disponibles</p>
+            </article>
+          </div>
+
+          <!-- Catégorie 4 : Data & IA -->
+          <div class="col-lg-4 col-md-6">
+            <article class="category-card text-center p-4" aria-label="Data et Intelligence Artificielle">
+              <i class="bi bi-robot category-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Data &amp; IA</h3>
+              <p class="text-muted">57 freelances disponibles</p>
+            </article>
+          </div>
+
+          <!-- Catégorie 5 : Rédaction Tech -->
+          <div class="col-lg-4 col-md-6">
+            <article class="category-card text-center p-4" aria-label="Rédaction Tech">
+              <i class="bi bi-pencil-fill category-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">Rédaction Tech</h3>
+              <p class="text-muted">43 freelances disponibles</p>
+            </article>
+          </div>
+
+          <!-- Catégorie 6 : DevOps & Cloud -->
+          <div class="col-lg-4 col-md-6">
+            <article class="category-card text-center p-4" aria-label="DevOps et Cloud">
+              <i class="bi bi-cloud-fill category-icon" aria-hidden="true"></i>
+              <h3 class="fs-5 fw-bold mt-3">DevOps &amp; Cloud</h3>
+              <p class="text-muted">61 freelances disponibles</p>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Section "Témoignages" -->
+    <section id="temoignages" class="py-5">
+      <div class="container">
+
+        <h2 class="text-center fw-bold mb-2">Ce qu'ils disent de nous</h2>
+        <p class="text-center text-muted mb-5">
+          Ils ont fait confiance à AfriTalent. Voici leur expérience.
+        </p>
+
+        <!-- Carousel Bootstrap -->
+        <div id="carouselTemoignages" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicateurs (petits points en bas) -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Témoignage 1"></button>
+            <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="1"
+              aria-label="Témoignage 2"></button>
+            <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="2"
+              aria-label="Témoignage 3"></button>
+          </div>
+
+          <!-- Contenu du carousel -->
+          <div class="carousel-inner">
+
+            <!-- Témoignage 1 -->
+            <div class="carousel-item active">
+              <article class="temoignage-card text-center p-5" aria-label="Témoignage de Aminata Diallo">
+                <img src="IMAGES/Diallo.jpg" alt="Photo de Aminata Diallo, développeuse web freelance"
+                  class="temoignage-avatar rounded-circle mb-3">
+                <p class="temoignage-citation fst-italic mb-3">
+                  « AfriTalent a transformé ma carrière. En deux mois, j'ai décroché
+                  3 missions sérieuses et doublé mes revenus. La plateforme est simple,
+                  claire et vraiment adaptée à notre réalité africaine. »
+                </p>
+                <!-- Note : 5 étoiles -->
+                <div class="temoignage-etoiles mb-2" aria-label="Note : 5 étoiles sur 5">
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                </div>
+                <h3 class="fs-6 fw-bold mb-0">Aminata Diallo</h3>
+                <p class="text-muted small">Développeuse Web — Freelance</p>
+              </article>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="carousel-item">
+              <article class="temoignage-card text-center p-5" aria-label="Témoignage de Kofi Mensah">
+                <img src="IMAGES/Mendy.jpg" alt="Photo de Sara Doumith, directeur technique"
+                  class="temoignage-avatar rounded-circle mb-3">
+                <p class="temoignage-citation fst-italic mb-3">
+                  « Nous avons recruté deux développeurs via AfriTalent en moins d'une semaine.
+                  Les profils étaient sérieux, les tarifs compétitifs et la communication
+                  avec les freelances a été fluide du début à la fin. »
+                </p>
+                <!-- Note : 4 étoiles -->
+                <div class="temoignage-etoiles mb-2" aria-label="Note : 4 étoiles sur 5">
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star text-warning" aria-hidden="true"></i>
+                </div>
+                <h3 class="fs-6 fw-bold mb-0">Sara Doumith</h3>
+                <p class="text-muted small">Directrice Technique — Entreprise</p>
+              </article>
+            </div>
+
+            <!-- Témoignage 3 -->
+            <div class="carousel-item">
+              <article class="temoignage-card text-center p-5" aria-label="Témoignage de Fatou Ndiaye">
+                <img src="IMAGES/Faye.jpg" alt="Photo de Issa Faye, designer UI/UX freelance"
+                  class="temoignage-avatar rounded-circle mb-3">
+                <p class="temoignage-citation fst-italic mb-3">
+                  « Ce que j'aime chez AfriTalent, c'est la confiance. Le système de paiement
+                  sécurisé m'a convaincue dès le départ. Je recommande la plateforme à tous
+                  les créatifs africains qui veulent se lancer. »
+                </p>
+                <!-- Note : 5 étoiles -->
+                <div class="temoignage-etoiles mb-2" aria-label="Note : 5 étoiles sur 5">
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                </div>
+                <h3 class="fs-6 fw-bold mb-0">Issa Faye</h3>
+                <p class="text-muted small">Designer UI/UX — Freelance</p>
+              </article>
+            </div>
+
+          </div><!-- fin carousel-inner -->
+
+          <!-- Boutons précédent / suivant -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTemoignages"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTemoignages"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div><!-- fin carousel -->
+      </div>
+    </section>
+    <!-- Section "Appel à l'action" (CTA) -->
+    <section id="cta" class="py-5">
+      <div class="container">
+        <div class="cta-bandeau text-center p-5">
+
+          <h2 class="fw-bold mb-3">
+            Rejoignez la communauté AfriTalent dès aujourd'hui !
+          </h2>
+          <p class="mb-4">
+            Plus de 2 500 freelances et 800 entreprises nous font déjà confiance.
+            À votre tour de faire partie de l'aventure.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="contact.html" class="btn btn-warnin btn-lg fw-bold">
+              S'inscrire gratuitement
+            </a>
+            <a href="freelances.html" class="btn btn-outline-light btn-lg">
+              Voir les freelances
+            </a>
+          </div>x
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Pied de page -->
+    <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">AfriTalent</h4>
+          <p class="text-muted">
+            La plateforme de référence pour connecter les freelances 
+            tech africains aux entreprises du monde entier.
+          </p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" aria-label="Facebook AfriTalent"><i class="bi bi-facebook fs-5" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter AfriTalent"><i class="bi bi-twitter-x fs-5" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn AfriTalent"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram AfriTalent"><i class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">Liens utiles</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html">Accueil</a></li>
+            <li class="mb-2"><a href="freelances.html">Trouver un freelance</a></li>
+            <li class="mb-2"><a href="tarifs.html">Tarifs</a></li>
+            <li class="mb-2"><a href="about.html">À propos</a></li>
+            <li class="mb-2"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">Ressources</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="blog.html">Blog</a></li>
+            <li class="mb-2"><a href="#">Guide du freelance</a></li>
+            <li class="mb-2"><a href="#">Centre d'aide</a></li>
+            <li class="mb-2"><a href="#">Politique de confidentialité</a></li>
+            <li class="mb-2"><a href="#">Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="fw-bold mb-3">Contact</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
+              <a href="mailto:contact@afritalent.com">contact@afritalent.com</a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>
+              <span>+221 33 486 00 00</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
+              <span>Dakar, Sénégal</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-4">
+      <p class="text-center text-muted mb-0">
+        &copy; <span id="annee"></span> AfriTalent. Tous droits réservés.
       </p>
-
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="contact.html" class="btn btn-warning btn-lg fw-bold">
-          S'inscrire gratuitement
-        </a>
-        <a href="freelances.html" class="btn btn-outline-light btn-lg">
-          Voir les freelances
-        </a>
-      </div>
-
     </div>
-  </div>
-</section>
-<!-- Pied de page -->
-<footer class="py-5">
-  <div class="container">
-    <div class="row g-4">
-
-      <!-- Colonne 1 : AfriTalent -->
-      <div class="col-lg-3 col-md-6">
-        <h4 class="fw-bold mb-3">AfriTalent</h4>
-        <p class="text-muted">
-          La plateforme de référence pour connecter les freelances 
-          tech africains aux entreprises du monde entier.
-        </p>
-        <!-- Réseaux sociaux -->
-        <div class="d-flex gap-3 mt-3">
-          <a href="#" aria-label="Facebook AfriTalent">
-            <i class="bi bi-facebook fs-5" aria-hidden="true"></i>
-          </a>
-          <a href="#" aria-label="Twitter AfriTalent">
-            <i class="bi bi-twitter-x fs-5" aria-hidden="true"></i>
-          </a>
-          <a href="#" aria-label="LinkedIn AfriTalent">
-            <i class="bi bi-linkedin fs-5" aria-hidden="true"></i>
-          </a>
-          <a href="#" aria-label="Instagram AfriTalent">
-            <i class="bi bi-instagram fs-5" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-      <!-- Colonne 2 : Liens utiles -->
-      <div class="col-lg-3 col-md-6">
-        <h4 class="fw-bold mb-3">Liens utiles</h4>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="index.html">Accueil</a>
-          </li>
-          <li class="mb-2">
-            <a href="freelances.html">Trouver un freelance</a>
-          </li>
-          <li class="mb-2">
-            <a href="tarifs.html">Tarifs</a>
-          </li>
-          <li class="mb-2">
-            <a href="about.html">À propos</a>
-          </li>
-          <li class="mb-2">
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Colonne 3 : Ressources -->
-      <div class="col-lg-3 col-md-6">
-        <h4 class="fw-bold mb-3">Ressources</h4>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="blog.html">Blog</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Guide du freelance</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Centre d'aide</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Politique de confidentialité</a>
-          </li>
-          <li class="mb-2">
-            <a href="#">Conditions d'utilisation</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Colonne 4 : Contact -->
-      <div class="col-lg-3 col-md-6">
-        <h4 class="fw-bold mb-3">Contact</h4>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
-            <a href="mailto:contact@afritalent.com">contact@afritalent.com</a>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>
-            <span>+221 33 486 00 00</span>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
-            <span>Dakar, Sénégal</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Ligne de séparation -->
-    <hr class="mt-4">
-    <!-- Copyright avec année dynamique -->
-    <p class="text-center text-muted mb-0">
-      &copy; <span id="annee"></span> AfriTalent. Tous droits réservés.
-    </p>
-  </div>
-</footer>
-</main>
-<!-- Bootstrap 5 via CDN : script JavaScript -->
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
-<!-- Votre script JavaScript -->
-<script src="js/main.js"></script>
+  </footer>
+  <!-- Bootstrap 5 via CDN : script JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Votre script JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>

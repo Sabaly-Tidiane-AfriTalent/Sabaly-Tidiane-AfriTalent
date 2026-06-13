@@ -1,0 +1,34 @@
+:root {
+  --color-primary:  #3961b7;
+  --color-secondary: #1bd24cec;
+  --color-dark: #464c57;
+  --color-light: #afb0b1bd;
+  --color-text: #000000;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --spacing-section: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-light);
+  line-height: 1.6;
+}
+.btn-warnin{
+  background-color: var(--color-secondary);
+}
+.text-warnin{
+  color: var(--color-secondary);
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  /*  définit une liste priorisée d'un ou plusieurs noms de famille de police
+   et/ou de noms de famille génériques pour l'élément sélectionné */
+}
