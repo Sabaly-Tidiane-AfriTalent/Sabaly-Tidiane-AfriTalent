@@ -2,7 +2,7 @@
   --color-primary:  #3961b7;
   --color-secondary: #1bd24cec;
   --color-dark: #464c57;
-  --color-light: #afb0b1bd;
+  --color-light: #ced4d7bb;
   --color-text: #000000;
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -31,4 +31,191 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   /*  définit une liste priorisée d'un ou plusieurs noms de famille de police
    et/ou de noms de famille génériques pour l'élément sélectionné */
+}
+/* SECTION HERO */
+
+#hero {
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  min-height: 90vh;     /*La section occupe au moins 90% de la hauteur de l'écran. vh = viewport height */
+  display: flex;
+  align-items: center;
+}
+
+#hero h1 {
+  /* La taille du titre s'adapte automatiquement : minimum 2rem, idéalement 5% de la largeur écran, maximum 3.5rem. */
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+#hero h2 {
+  font-size: 1.1rem;
+}
+
+/* Statistiques sous le hero */
+#hero .row.mt-5 h3 {
+  font-size: 2.5rem;
+}
+
+/* BENTO GRID — Comment ça marche */
+
+.bento-grid {
+  display: grid;
+  grid-auto-columns: repeat(2, 1fr);
+  /* La taille du titre s'adapte automatiquement : minimum 2rem, idéalement 5% de la largeur écran, maximum 3.5rem. */
+  grid-template-rows: auto;
+  gap: 1.5rem;
+}
+
+/* Carte normale */
+.bento-card {
+  min-width: 30rem;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  /* La carte monte de 8px au survol — donne un effet de "lévitation" */
+  box-shadow: 0 8px 30px rgba(57, 97, 183, 0.15);
+}
+
+/* Grande carte (étape 1) — occupe 2 colonnes */
+.bento-card--large {
+  display: grid;
+  grid-column: span 2;
+  background: linear-gradient(135deg, var(--color-primary), #5b7fd4);
+  color: #ffffff;
+}
+
+.bento-card--large h3,
+.bento-card--large p {
+  color: #ffffff;
+}
+
+/* Carte large en bas (étape 4) — occupe toute la largeur */
+.bento-card--wide {
+  grid-column: span 2;
+  /* La carte occupe 2 colonnes sur 3 (c'est ce qui crée l'asymétrie du Bento). */
+  background: var(--color-dark);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 20px;
+}
+
+.bento-card--wide h3,
+.bento-card--wide p {
+  color: #ffffff;
+}
+
+/* Numéro d'étape */
+.step-number {
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0.15;
+  font-family: var(--font-heading);
+  line-height: 1;
+  display: block;
+}
+
+/* Icône d'étape */
+.step-icon {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  display: block;
+  margin: 0.5rem 0 1rem;
+}
+
+.bento-card--large .step-icon,
+.bento-card--wide .step-icon {
+  color: #ffffff;
+}
+/* Responsive Bento Grid */
+@media (max-width: 768px) {
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card--large,
+  .bento-card--wide {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+}
+
+/* CATÉGORIES DE SERVICES */
+
+#categories {
+  background-color: #f8f9fa;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  /* Anime les changements en 0.3 secondes avec un effet fluide (ease) */
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(57, 97, 183, 0.2);
+  border-color: var(--color-primary);
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+.category-card:hover .category-icon {
+  color: var(--color-secondary);
+  transform: scale(1.2);
+}
+
+/* TÉMOIGNAGES — Carousel */
+
+#temoignages {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%);
+}
+
+.temoignage-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.temoignage-avatar {
+  width: 155px;
+  height: 155px;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+}
+
+.temoignage-citation {
+  font-size: 1.05rem;
+  color: var(--color-dark);
+  max-width: 550px;
+  margin: 0 auto 1rem;
+}
+
+/* Couleur des flèches carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--color-primary);
 }
