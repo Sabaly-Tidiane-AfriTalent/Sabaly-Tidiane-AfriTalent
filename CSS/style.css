@@ -36,7 +36,7 @@ h1, h2, h3, h4 {
 
 #hero {
   background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
-  min-height: 90vh;     /*La section occupe au moins 90% de la hauteur de l'écran. vh = viewport height */
+  min-height: 90vh;    /*La section occupe au moins 90% de la hauteur de l'écran. vh = viewport height */
   display: flex;
   align-items: center;
 }
@@ -218,4 +218,185 @@ h1, h2, h3, h4 {
 
 .carousel-indicators [data-bs-target] {
   background-color: var(--color-primary);
+}
+
+ /*  RESPONSIVE DESIGN  */
+/* TABLETTE (768px et moins) */
+@media (max-width: 768px) {
+
+  /* Le titre hero devient plus petit */
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Les boutons hero prennent toute la largeur */
+  #hero .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Le bento grid passe en 1 colonne */
+  .bento-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .bento-card--large{
+    grid-column: span 2;
+    background: linear-gradient(135deg, var(--color-primary)#5b7fd4);
+    color: #ffffff;
+  }
+  .bento-card--wide {
+    grid-column: span 1;
+  }
+
+  /* La carte wide passe en colonne verticale */
+  .bento-card--wide {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  /* Le bento card n'a plus de largeur minimale */
+  .bento-card {
+    min-width: 30rem;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgb(red, green, blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+/* MOBILE (575px et moins) */
+@media (max-width: 575px) {
+
+  /* Moins d'espace entre les sections */
+  section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  /* Avatar témoignage plus petit */
+  .temoignage-avatar {
+    width: 80px;
+    height: 80px;
+  }
+} 
+/* CARTES FREELANCES */
+.freelance-card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(57, 97, 183, 0.2);
+}
+
+.freelance-avatar {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+/* PLANS TARIFAIRES */
+.plan-card {
+  border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(57, 97, 183, 0.2);
+}
+
+/* Plan recommandé : bordure colorée */
+.plan-card--populaire {
+  border-color: var(--color-primary);
+  transform: scale(1.02);
+}
+
+/* VALEURS */
+.valeur-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.valeur-card:hover {
+  transform: translateY(-5px);
+}
+
+.valeur-icon {
+  font-size: 2.5rem;
+  color: var(--color-secondary);
+  display: block;
+}
+
+/* ÉQUIPE */
+.membre-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.membre-card:hover {
+  transform: translateY(-5px);
+}
+
+.membre-avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Icône bento chiffres clés */
+.bento-icon {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  display: grid;
+  margin-bottom: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-column: span 2;
+}
+#chiffres .bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Carte normale : 1 colonne */
+#chiffres .bento-card {
+  min-width: unset;
+
+}
+
+/* Grande carte : 2 colonnes */
+#chiffres .bento-card--large {
+  grid-column: span 2;
+}
+
+/* Carte wide : 2 colonnes */
+#chiffres .bento-card--wide {
+  grid-column: span 2;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #chiffres .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #chiffres .bento-card--large,
+  #chiffres .bento-card--wide {
+    grid-column: span 1;
+  }
 }
