@@ -379,6 +379,11 @@ h1, h2, h3, h4 {
 
 /* Grande carte : 2 colonnes */
 #chiffres .bento-card--large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   grid-column: span 2;
 }
 
@@ -399,4 +404,85 @@ h1, h2, h3, h4 {
   #chiffres .bento-card--wide {
     grid-column: span 1;
   }
+}
+
+/* --- DARK MODE --- */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar { background-color: #1a1a2e !important; }
+
+body.dark-mode .card,
+body.dark-mode .category-card,
+body.dark-mode .bento-card { background-color: #1e1e1e !important; color: #f0f0f0; }
+
+/* Hero */
+body.dark-mode #hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+body.dark-mode #hero h1 { color: #f0f0f0; }
+body.dark-mode #hero h2 { color: #aaaaaa !important; }
+body.dark-mode #hero .text-muted { color: #888888 !important; }
+body.dark-mode .text-warnin { color: #4dffa0; }
+
+/* Catégories */
+body.dark-mode #categories { background-color: #1a1a1a; }
+body.dark-mode .category-card { background-color: #1e1e1e !important; border-color: #333333; }
+body.dark-mode .category-card h3 { color: #f0f0f0; }
+body.dark-mode .category-card .text-muted { color: #888888 !important; }
+
+/* Témoignages */
+body.dark-mode #temoignages {
+  background: linear-gradient(180deg, #121212 0%, #1a1a2e 100%);
+}
+body.dark-mode .temoignage-card { background-color: #1e1e1e !important; color: #f0f0f0; }
+body.dark-mode .temoignage-citation { color: #cccccc; }
+
+/* CTA */
+body.dark-mode #cta .cta-bandeau { background-color: #1a1a2e; color: #f0f0f0; }
+
+/* Footer */
+body.dark-mode footer { background-color: #111111 !important; color: #cccccc; }
+body.dark-mode footer a { color: #aaaaaa; }
+body.dark-mode footer a:hover { color: #4dffa0; }
+body.dark-mode .text-muted { color: #aaa !important; }
+/* --- NAVBAR AU SCROLL --- */
+#mainNavbar {
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mainNavbar.navbar-scrolled {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  background-color: #0a3d62 !important; /* bleu plus foncé au scroll */
+}
+
+/* --- BOUTON RETOUR EN HAUT --- */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--couleur-primaire, #0d6efd);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
