@@ -47,3 +47,45 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// ========== ANIMATION FADE-IN AU SCROLL ==========
+const fadeSections = document.querySelectorAll('.fade-in-section');
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+});
+
+fadeSections.forEach(section => fadeObserver.observe(section));
+
+// ========== COMPTEURS ANIMÉS ==========
+const counters = document.querySelectorAll('.counter');
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counterElement = entry.target;
+      const target = parseInt(counterElement.dataset.target);
+      let current = 0;
+      const increment = target / 100; // on divise l'animation en 100 étapes
+
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          counterElement.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counterElement.textContent = target;
+        }
+      };
+
+      updateCounter();
+      counterObserver.unobserve(counterElement);
+    }
+  });
+});
+
+counters.forEach(counter => counterObserver.observe(counter));
