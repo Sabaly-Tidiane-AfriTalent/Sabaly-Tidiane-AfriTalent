@@ -42,6 +42,7 @@
             <button id="darkModeToggle" class="btn btn-outline-light btn-sm" aria-label="Activer le mode sombre">
               <i class="bi bi-moon-fill"></i> Dark Mode
              </button>
+             </li>
         </ul>
       </div>
     </div>
@@ -59,6 +60,7 @@
     <!-- Barre de filtres -->
     <section id="filtres" class="py-3">
       <div class="container">
+      <h2 class="text-center fw-bold mb-3">Filtrer par catégorie</h2>
         <div class="d-flex flex-wrap gap-2 justify-content-center">
 
           <!-- Les boutons de filtre : data-categorie sera utilisé par le JS plus tard -->
@@ -91,6 +93,7 @@
     <!-- Grille de profils freelances -->
     <section id="grille-freelances" class="py-5">
       <div class="container">
+        <h2 class="visually-hidden">Liste des freelances</h2>
         <div class="row g-4" id="freelances-container">
 
           <!-- Profil 1 -->
@@ -108,7 +111,7 @@
                   Passionné par les interfaces rapides et accessibles.
                 </p>
                 <!-- Note étoiles -->
-                <div class="mb-2" aria-label="Note : 5 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 5 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -135,7 +138,7 @@
                   Créatrice d'expériences numériques élégantes. 
                   Maîtrise de Figma, Adobe XD et du design system.
                 </p>
-                <div class="mb-2" aria-label="Note : 4 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 4 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -162,7 +165,7 @@
                   Expert Python, Machine Learning et visualisation de données. 
                   Ancien consultant chez une grande banque africaine.
                 </p>
-                <div class="mb-2" aria-label="Note : 5 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 5 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -189,7 +192,7 @@
                   Experte en SEO, réseaux sociaux et campagnes Google Ads. 
                   A accompagné plus de 30 startups africaines.
                 </p>
-                <div class="mb-2" aria-label="Note : 4 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 4 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -207,16 +210,16 @@
             <article class="freelance-card card h-100" aria-label="Profil de Sekou Camara">
               <img
                 src="IMAGES/freelan.jpg"
-                alt="Photo de Sekou Camara, ingénieur DevOps"
+                alt="Photo de Amadou Doupon, ingénieur DevOps"
                 class="card-img-top freelance-avatar">
               <div class="card-body text-center">
-                <h2 class="fs-5 fw-bold mb-1">Amadou kébé</h2>
+                <h2 class="fs-5 fw-bold mb-1">Amadou Doupon</h2>
                 <p class="text-primary fw-semibold mb-2">Ingénieur DevOps</p>
                 <p class="text-muted small mb-3">
                   Spécialiste Docker, Kubernetes et AWS. 
                   Automatise les pipelines CI/CD pour les équipes agiles.
                 </p>
-                <div class="mb-2" aria-label="Note : 5 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 5 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -242,7 +245,7 @@
                   Spécialiste en documentation technique, articles de blog 
                   et contenus SEO pour les entreprises du numérique.
                 </p>
-                <div class="mb-2" aria-label="Note : 4 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 4 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -269,7 +272,7 @@
                   Expert Flutter et React Native. Crée des applications 
                   mobiles performantes pour iOS et Android.
                 </p>
-                <div class="mb-2" aria-label="Note : 5 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 5 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -296,7 +299,7 @@
                   Spécialiste identité visuelle, logos et supports print. 
                   Maîtrise Illustrator, Photoshop et InDesign.
                 </p>
-                <div class="mb-2" aria-label="Note : 5 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 5 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -314,16 +317,16 @@
             <article class="freelance-card card h-100" aria-label="Profil de Abdou Ndiaye">
               <img
                 src="IMAGES/freell.jpg"
-                alt="Photo de Abdou Ndiaye, ingénieur IA"
+                alt="Photo de Elhadj Barry, ingénieur IA"
                 class="card-img-top freelance-avatar">
               <div class="card-body text-center">
-                <h2 class="fs-5 fw-bold mb-1">Ehadj Barry</h2>
+                <h2 class="fs-5 fw-bold mb-1">Elhadj Barry</h2>
                 <p class="text-primary fw-semibold mb-2">Ingénieur IA</p>
                 <p class="text-muted small mb-3">
                   Développe des modèles de deep learning et de NLP. 
                   Expérience en computer vision et traitement du langage naturel.
                 </p>
-                <div class="mb-2" aria-label="Note : 4 étoiles sur 5">
+                <div class="mb-2" role="img" aria-label="Note : 4 étoiles sur 5">
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
                   <i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
@@ -339,12 +342,12 @@
       </div>
     </section>
   </main>
-  <!-- Footer (identique à index.html) -->
+  
   <footer class="py-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-3 col-md-6">
-          <h4 class="fw-bold mb-3">AfriTalent</h4>
+          <h3 class="fw-bold mb-3">AfriTalent</h3>
           <p class="text-muted">
             La plateforme de référence pour connecter les freelances 
             tech africains aux entreprises du monde entier.
@@ -357,7 +360,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h4 class="fw-bold mb-3">Liens utiles</h4>
+          <h3 class="fw-bold mb-3">Liens utiles</h3>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html">Accueil</a></li>
             <li class="mb-2"><a href="freelances.html">Trouver un freelance</a></li>
@@ -367,7 +370,7 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h4 class="fw-bold mb-3">Ressources</h4>
+          <h3 class="fw-bold mb-3">Ressources</h3>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="blog.html">Blog</a></li>
             <li class="mb-2"><a href="#">Guide du freelance</a></li>
@@ -377,7 +380,7 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h4 class="fw-bold mb-3">Contact</h4>
+          <h3 class="fw-bold mb-3">Contact</h3>
           <ul class="list-unstyled">
             <li class="mb-2">
               <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>

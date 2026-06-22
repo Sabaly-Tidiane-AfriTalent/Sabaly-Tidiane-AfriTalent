@@ -1,8 +1,10 @@
+ /* VARIABLES ET CONFIGURATIONS GLOBALES  */
+
 :root {
   --color-primary:  #3961b7;
   --color-secondary: #1bd24cec;
   --color-dark: #464c57;
-  --color-light: #ced4d7bb;
+  --color-light: #c4c0c0ea;
   --color-text: #000000;
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -29,9 +31,11 @@ body {
 }
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
+
   /*  définit une liste priorisée d'un ou plusieurs noms de famille de police
    et/ou de noms de famille génériques pour l'élément sélectionné */
 }
+
 /* SECTION HERO */
 
 #hero {
@@ -134,7 +138,8 @@ h1, h2, h3, h4 {
 .bento-card--wide .step-icon {
   color: #ffffff;
 }
-/* Responsive Bento Grid */
+
+ /* SECTION RESPONSIVE (Media Queries) */
 @media (max-width: 768px) {
   .bento-grid {
     display: grid;

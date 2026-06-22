@@ -1,10 +1,12 @@
 //  DARK MODE 
 const toggleBtn = document.getElementById('darkModeToggle');
-
+//On vérifie le localStorage au chargement pour appliquer le thème sauvegardé lors d'une visite précédente
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark-mode');
   toggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i> Light Mode';
 }
+//// Au clic : bascule la classe dark-mode, sauvegarde le choix 
+// dans localStorage et met à jour le texte du bouton
 
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
@@ -20,6 +22,10 @@ toggleBtn.addEventListener('click', () => {
 
 
 //  NAVBAR AU SCROLL 
+//// On écoute le scroll de la page.
+// Si l'utilisateur a défilé de plus de 50px,
+// on ajoute un style à la navbar (ombre, fond...)
+// Sinon on retire ce style
 const navbar = document.getElementById('mainNavbar');
 
 window.addEventListener('scroll', () => {
@@ -63,12 +69,14 @@ fadeSections.forEach(section => fadeObserver.observe(section));
 
 // ========== COMPTEURS ANIMÉS ==========
 const counters = document.querySelectorAll('.counter');
+// On récupère la valeur cible depuis l'attribut data-target du HTML
+// On divise par 100 pour créer 100 étapes d'animation égales
 
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const counterElement = entry.target;
-      const target = parseInt(counterElement.dataset.target);
+      const target = parseInt(counterElement.dataset.target); 
       let current = 0;
       const increment = target / 100; // on divise l'animation en 100 étapes
 
@@ -76,12 +84,15 @@ const counterObserver = new IntersectionObserver((entries) => {
         current += increment;
         if (current < target) {
           counterElement.textContent = Math.floor(current);
-          requestAnimationFrame(updateCounter);
+          // requestAnimationFrame synchronise l'animation avec 
+         // le rafraîchissement de l'écran pour une animation fluide
+          requestAnimationFrame(updateCounter); 
         } else {
           counterElement.textContent = target;
         }
       };
-
+// On arrête d'observer l'élément pour que l'animation
+// ne se rejoue pas si l'utilisateur rescroll
       updateCounter();
       counterObserver.unobserve(counterElement);
     }
@@ -156,7 +167,13 @@ contactForm.addEventListener('submit', (event) => {
 // --- Validation de l'EMAIL ---
 const emailInput = document.getElementById('email');
 const erreurEmail = document.getElementById('erreur-email');
+// Vérifie le format : quelquechose@domaine.extension
+// Rejette les espaces, les @ multiples, et les emails sans point final
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// On suppose que le formulaire est valide au départ.
+// Il passe à false dès qu'un champ ne respecte pas les règles.
+// À la fin, si toujours true, on affiche le message de succès.
 
 if (emailInput.value.trim() === '') {
   erreurEmail.textContent = "L'email est requis.";
@@ -175,6 +192,9 @@ if (emailInput.value.trim() === '') {
 }
 
 // --- Validation du SUJET ---
+// Si "tous" est sélectionné, on affiche toutes les cartes.
+// Sinon on affiche uniquement les cartes dont la catégorie correspond au filtre choisi.
+
   const sujetInput = document.getElementById('sujet');
   const erreurSujet = document.getElementById('erreur-sujet');
 
